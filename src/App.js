@@ -9,11 +9,11 @@ import {} from "react-bootstrap";
 import alertify from "alertifyjs";
 
 const API_POPULAR =
-  "https://api.themoviedb.org/3/movie/popular?api_key=dcbcfe9ab6d2818e853036429ecb24e7";
+  "https://api.themoviedb.org/3/movie/popular?api_key=<<API_KEY>>";
 const API_TRENDING =
-  "https://api.themoviedb.org/3/trending/all/day?api_key=dcbcfe9ab6d2818e853036429ecb24e7";
+  "https://api.themoviedb.org/3/trending/all/day?api_key=<<API_KEY>>";
 const API_SEARCH =
-  "https://api.themoviedb.org/3/search/movie?api_key=dcbcfe9ab6d2818e853036429ecb24e7&query";
+  "https://api.themoviedb.org/3/search/movie?api_key=<<API_KEY>>&query";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -59,15 +59,19 @@ function App() {
   const searchMovie = async (e) => {
     e.preventDefault();
     console.log("Searching");
-    try {
-      const url = API_SEARCH + `=${query}`;
-      const res = await fetch(url);
-      const data = await res.json();
-      console.log(data);
-      setMovies(data.results);
-      alertify.success("Searched Movies Fetched!", 2);
-    } catch (e) {
-      console.log(e);
+    if(query !== ""){
+      try {
+        const url = API_SEARCH + `=${query}`;
+        const res = await fetch(url);
+        const data = await res.json();
+        console.log(data);
+        setMovies(data.results);
+        alertify.success("Searched Movies Fetched!", 2);
+      } catch (e) {
+        console.log(e);
+      }
+    }else{
+      alertify.alert("Please enter a movie name!", 2);
     }
   };
 

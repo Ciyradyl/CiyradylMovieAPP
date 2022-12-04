@@ -1,36 +1,42 @@
-**Singel Page Movie Application(React)**
+**Single Page Movie Application(React)**
 
-*This application fetches json data from TMDB API and uses it to populate the related reach pages(trending, popular) with help of React. You can check the movie details via clicking on that specific movie that you want to see the details. It also contains a search query for movies.*
+*This application fetches json data from TMDB API and uses it to populate the related reach pages(trending, popular) with help of two buttons. You can check the movie details via clicking on that specific movie that you want to see the details. It also contains a search query for movies.*
+
+**December 4, 2022 Update**
+
+- *[Added]Specific navigation bar javascript file generated and implemented to the project in order to improve the readability of the code.*
+- *[Added]Searching with no input will get an alert to the screen thanks to alertify.*
+- *[Fixed]The button called "Popular" which is located at navigation bar no longer refresh the page when clicked.*
+- *[Fixed]The search function no longer crash the page when user don't enter an input.(empty input issue)*
 
 **1. Actively used technologies are;**
 
-- React
-- Javascript
-- Bootstrap
-- React Bootstrap
-- CSS
-- Alertify
+- *React*
+- *Javascript*
+- *Bootstrap*
+- *React Bootstrap*
+- *CSS*
+- *Alertify*
 
 **2. In the future;**
 
-- Implementing "react-router-dom" and change the whole structure of the App.js with help of router technology.
-- Adding a category section and fetching "genre_ids:" parameter from TMDB API to implement category management.
-- Generating a specific Navi.js file as a component and replacing the present one with Navi.js. Also detailing the Navbar with new features.
+- *Implementing "react-router-dom" and change the whole structure of the App.js with help of router technology.*
+- *Adding a category section and fetching "genre_ids:" parameter from TMDB API to implement category management.*
+- *[DONE] Generating a specific Navi.js file as a component and replacing the present one with Navi.js. Also detailing the Navbar with new features.*
 
-3. How to start the project**
+**3. How to start the project**
 
-- npm start
+- *npm start*
 
 **4. Significant API ENDPOINTS**
 
-API_POPULAR="https://api.themoviedb.org/3/movie/popular?api_key=<<API_KEY>>"
-API_TRENDING="https://api.themoviedb.org/3/trending/all/day?api_key=<<API_KEY>>"
-API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=<<API_KEY>>&query"
-API_IMG="https://image.tmdb.org/t/p/w500/"
+*API_POPULAR="https://api.themoviedb.org/3/movie/popular?api_key=<<API_KEY>>"*
+*API_TRENDING="https://api.themoviedb.org/3/trending/all/day?api_key=<<API_KEY>>"*
+*API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=<<API_KEY>>&query"*
+*API_IMG="https://image.tmdb.org/t/p/w500/"*
 
 **5. How to Obtain a API Key**
-- You have to create a https://www.themoviedb.org/ account. You can see the API category at the profile/settings part. Just follow the guides from there and you will be fine.
-
+- *You have to create a https://www.themoviedb.org/ account. You can see the API category at the profile/settings part. Just follow the guides from there and you will be fine.*
 
 <details>
  <summary>Check out the GIF</summary>
@@ -41,8 +47,5 @@ API_IMG="https://image.tmdb.org/t/p/w500/"
 ![notfound](https://user-images.githubusercontent.com/32496821/205059412-f57bbc3f-08d5-4427-85d0-564ea3802f71.gif)
 
 </details>
-
-
-
 
 
