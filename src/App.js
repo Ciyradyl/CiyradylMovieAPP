@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import MovieBox from "./MovieBox";
+import Navi from "./Navi";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button
-} from "react-bootstrap";
-import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
+import {} from "react-bootstrap";
+
 // import { Routes, Route } from "react-router-dom";
 import alertify from "alertifyjs";
 
@@ -34,6 +28,34 @@ function App() {
       });
   }, []);
 
+  const getTrending = async (e) => {
+    e.preventDefault();
+    try {
+      const trending_url = API_TRENDING;
+      const res = await fetch(trending_url);
+      const data = await res.json();
+      console.log(data);
+      setMovies(data.results);
+      alertify.success("Trend Movies Fetched!", 2);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const getPopular = async (e) => {
+    e.preventDefault();
+    try {
+      const popular_url = API_POPULAR;
+      const res = await fetch(popular_url);
+      const data = await res.json();
+      console.log(data);
+      setMovies(data.results);
+      alertify.success("Popular Movies Fetched!", 2);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   const searchMovie = async (e) => {
     e.preventDefault();
     console.log("Searching");
@@ -49,62 +71,23 @@ function App() {
     }
   };
 
-  const searchTrending = async (e) => {
-    e.preventDefault();
-    try {
-      const trending_url = API_TRENDING;
-      const res = await fetch(trending_url);
-      const data = await res.json();
-      console.log(data);
-      setMovies(data.results);
-      alertify.success("Trend Movies Fetched!", 2);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   const changeHandler = (e) => {
     setQuery(e.target.value);
   };
 
   return (
     <>
-      <Navbar bg="warning" expand="lg" variant="light">
-        <Container fluid>
-          <Navbar.Brand href="/">MovieDB APP</Navbar.Brand>
-          <Navbar.Brand href="/">Popular</Navbar.Brand>
-          <Navbar.Brand href="/" onClick={searchTrending}>
-            Trending
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>
-          <NavbarCollapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-3"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            ></Nav>
-
-            <Form className="d-flex" onSubmit={searchMovie}>
-              <FormControl
-                type="search"
-                placeholder="Movie Name"
-                className="me-2"
-                aria-label="search"
-                name="query"
-                value={query}
-                onChange={changeHandler}
-              ></FormControl>
-              <Button variant="dark" type="submit">
-                Search
-              </Button>
-            </Form>
-          </NavbarCollapse>
-        </Container>
-      </Navbar>
+      <Navi
+        getPopular={getPopular}
+        getTrending={getTrending}
+        searchMovie={searchMovie}
+        changeHandler={changeHandler}
+        query={query}
+      ></Navi>
 
       <div>
         <div>
-          {movies.length > 0 ?(
+          {movies.length > 0 ? (
             <div className="container">
               <div className="grid">
                 {movies.map((movieReq) => (

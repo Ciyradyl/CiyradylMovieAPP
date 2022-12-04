@@ -1,0 +1,58 @@
+import React from "react";
+
+import {
+  Container,
+  Navbar,
+  Nav,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
+import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
+
+const Navi = ({
+  getPopular,
+  getTrending,
+  searchMovie,
+  changeHandler,
+  query,
+}) => {
+  return (
+    <Navbar bg="warning" expand="lg" variant="light">
+      <Container fluid>
+        <Navbar.Brand href="/">MovieDB APP</Navbar.Brand>
+        <Navbar.Brand href="/" onClick={getPopular}>
+          Popular
+        </Navbar.Brand>
+        <Navbar.Brand href="/" onClick={getTrending}>
+          Trending
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>
+        <NavbarCollapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-3"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          ></Nav>
+
+          <Form className="d-flex" onSubmit={searchMovie}>
+            <FormControl
+              type="search"
+              placeholder="Movie Name"
+              className="me-2"
+              aria-label="search"
+              name="query"
+              value={query}
+              onChange={changeHandler}
+            ></FormControl>
+            <Button variant="dark" type="submit">
+              Search
+            </Button>
+          </Form>
+        </NavbarCollapse>
+      </Container>
+    </Navbar>
+  );
+};
+
+export default Navi;
