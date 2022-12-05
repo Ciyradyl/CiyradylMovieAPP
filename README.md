@@ -44,7 +44,8 @@
 
 *API_POPULAR="https://api.themoviedb.org/3/movie/popular?api_key=<<API_KEY>>"*
 *API_TRENDING="https://api.themoviedb.org/3/trending/all/day?api_key=<<API_KEY>>"*
-*API_GENRE="https://api.themoviedb.org/3/genre/movie/list?api_key=<<API_KEY>>"
+*API_GENRE_LIST="https://api.themoviedb.org/3/genre/movie/list?api_key=<<API_KEY>>"
+API_GENRE="https://api.themoviedb.org/3/discover/movie?api_key=<<API_KEY>>&with_genres"
 *API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=<<API_KEY>>&query"*
 *API_IMG="https://image.tmdb.org/t/p/w500/"*
 
