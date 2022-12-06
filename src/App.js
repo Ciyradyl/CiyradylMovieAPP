@@ -4,7 +4,7 @@ import "./App.css";
 import Navi from "./Navi";
 import MovieBox from "./MovieBox";
 import GenreList from "./GenreList";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 // import { Routes, Route } from "react-router-dom";
 
@@ -141,33 +141,35 @@ function App() {
 
       <div>
         <div>
-          <Row className="Container">
-            <Col xs="auto">
-              {genres.map((genreReq) => (
-                <GenreList
-                  genreChangeHandler={genreChangeHandler}
-                  key={genreReq.id}
-                  {...genreReq}
-                ></GenreList>
-              ))}
-            </Col>
-            <Col>
-              {movies.length > 0 ? (
-                <div>
-                  <div className="grid">
-                    {movies.map((movieReq) => (
-                      <MovieBox key={movieReq.id} {...movieReq}></MovieBox>
-                    ))}
+          <Container fluid>
+            <Row>
+              <Col xs="auto">
+                {genres.map((genreReq) => (
+                  <GenreList
+                    genreChangeHandler={genreChangeHandler}
+                    key={genreReq.id}
+                    {...genreReq}
+                  ></GenreList>
+                ))}
+              </Col>
+              <Col>
+                {movies.length > 0 ? (
+                  <div>
+                    <div className="grid">
+                      {movies.map((movieReq) => (
+                        <MovieBox key={movieReq.id} {...movieReq}></MovieBox>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ) : (
-                <h2 className="Container">
-                  None of the movies in our database match with your search!
-                  Please try with another input
-                </h2>
-              )}
-            </Col>
-          </Row>
+                ) : (
+                  <h2 className="Container">
+                    None of the movies in our database match with your search!
+                    Please try with another input
+                  </h2>
+                )}
+              </Col>
+            </Row>
+          </Container>
         </div>
       </div>
       <ToastContainer

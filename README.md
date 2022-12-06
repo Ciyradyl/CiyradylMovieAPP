@@ -21,6 +21,12 @@
 - *[Added]Implemented a category section that will help you to filter movies by their categories.*
 - *[Fixed]Further optimizations in order to acquire a responsive design.(not all of them.)*
 
+**December 6, 2022 Update**
+
+- *[Fixed]Responsive design bugs fixed thanks to react-bootstrap*
+- *[Changes]More natural CSS decision changes.*
+- *[Added]Hover CSS to genre list*
+
 </details>
 
 **1. Actively used technologies are;**
