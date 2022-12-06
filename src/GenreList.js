@@ -21,8 +21,9 @@ const GenreList = ({ name, id, genreChangeHandler }) => {
       <ListGroup.Item
         style={{
           textAlign: "left",
-          backgroundColor: isHovering ? "#FFC107" : "",
+          backgroundColor: isHovering ? "" : "",
           color: isHovering ? "white" : "",
+          border: isHovering ? "1px solid white" : ""
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

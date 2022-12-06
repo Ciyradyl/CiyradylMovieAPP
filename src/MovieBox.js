@@ -23,7 +23,7 @@ const MovieBox = ({
   const handleClose = () => setShow(false);
 
   return (
-    <div className="card text-center bg-warning m-2">
+    <div className="card text-center bg-white m-2">
       <div className="card-body">
         <img
           className="card-img-top"

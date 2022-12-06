@@ -18,7 +18,7 @@ const Navi = ({
   query,
 }) => {
   return (
-    <Navbar bg="warning" expand="lg" variant="light">
+    <Navbar bg="black" expand="lg" variant="dark">
       <Container fluid>
         <Navbar.Brand href="/">MovieDB APP</Navbar.Brand>
         <Navbar.Brand href="/" onClick={getPopular}>
@@ -45,7 +45,7 @@ const Navi = ({
               value={query}
               onChange={changeHandler}
             ></FormControl>
-            <Button variant="dark" type="submit">
+            <Button variant="light" type="submit">
               Search
             </Button>
           </Form>
