@@ -21,7 +21,7 @@ const GenreList = ({ name, id, genreChangeHandler }) => {
       <ListGroup.Item
         style={{
           textAlign: "left",
-          backgroundColor: isHovering ? "" : "",
+          backgroundColor: isHovering ? "black" : "",
           color: isHovering ? "white" : "",
           border: isHovering ? "1px solid white" : ""
         }}
