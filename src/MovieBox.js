@@ -31,7 +31,7 @@ const MovieBox = ({
           src={API_IMG + poster_path}
           alt=""
         ></img>
-
+    
         <Modal show={show} onHide={handleClose}>
           <ModalHeader closeButton>
             <ModalTitle>

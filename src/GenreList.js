@@ -1,7 +1,16 @@
-import React, {} from "react";
+import React, { useState } from "react";
 import { ListGroup } from "react-bootstrap";
 
 const GenreList = ({ name, id, genreChangeHandler }) => {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
 
   const selectGenre = () => {
     genreChangeHandler(id);
@@ -9,7 +18,17 @@ const GenreList = ({ name, id, genreChangeHandler }) => {
 
   return (
     <ListGroup className="mt-2">
-      <ListGroup.Item className="bg-warning" onClick={selectGenre}>
+      <ListGroup.Item
+        style={{
+          textAlign: "left",
+          backgroundColor: isHovering ? "#FFC107" : "",
+          color: isHovering ? "white" : "",
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="btn"
+        onClick={selectGenre}
+      >
         {name}
       </ListGroup.Item>
     </ListGroup>
