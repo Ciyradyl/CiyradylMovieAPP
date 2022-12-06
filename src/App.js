@@ -13,7 +13,7 @@ const API_TRENDING =
 const API_GENRE_LIST =
   "https://api.themoviedb.org/3/genre/movie/list?api_key=dcbcfe9ab6d2818e853036429ecb24e7";
 const API_GENRE =
-  "https://api.themoviedb.org/3/discover/movie?api_key=dcbcfe9ab6d2818e853036429ecb24e7&with_genres";
+  "https://api.themoviedb.org/3/discover/movie?api_key=dcbcfe9ab6d2818e853036429ecb24e7&with_genres=";
 const API_SEARCH =
   "https://api.themoviedb.org/3/search/movie?api_key=dcbcfe9ab6d2818e853036429ecb24e7&query";
 
@@ -54,7 +54,7 @@ function App() {
   };
 
   const searchGenre = (genreId) => {
-    fetch(API_GENRE + `=${genreId}`)
+    fetch(genreId)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -124,7 +124,7 @@ function App() {
   };
 
   const genreChangeHandler = (e) => {
-    searchGenre(e);
+    searchGenre(API_GENRE + e);
   };
 
   return (
