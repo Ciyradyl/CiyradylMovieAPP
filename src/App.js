@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
+import Details from "./pages/Details";
 import Navi from "./components/Navi";
 
 // import { Routes, Route } from "react-router-dom";
@@ -49,16 +51,6 @@ function App() {
       progress: undefined,
       theme: "light",
     });
-  };
-
-  const searchGenre = (genreId) => {
-    fetch(genreId)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setMovies(data.results);
-        successAlert();
-      });
   };
 
   const getTrending = async (e) => {
@@ -117,6 +109,16 @@ function App() {
     }
   };
 
+  const searchGenre = (genreId) => {
+    fetch(genreId)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setMovies(data.results);
+        successAlert();
+      });
+  };
+
   const changeHandler = (e) => {
     setQuery(e.target.value);
   };
@@ -135,11 +137,20 @@ function App() {
         query={query}
       ></Navi>
 
-      <Home
-        movies={movies}
-        genres={genres}
-        genreChangeHandler={genreChangeHandler}
-      ></Home>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <Home
+              movies={movies}
+              genres={genres}
+              genreChangeHandler={genreChangeHandler}
+            ></Home>
+          }
+        ></Route>
+        <Route path="/details" element={<Details></Details>}></Route>
+      </Routes>
 
       <ToastContainer
         position="bottom-right"

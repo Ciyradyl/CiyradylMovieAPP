@@ -26,10 +26,11 @@ const Home = ({ genres, movies, genreChangeHandler }) => {
               </div>
             </div>
           ) : (
-            <div className="mt-2" style={{display:"flex", justifyContent:"center"}}>
-              <h2>
-                Database don't contain movies related to your search!
-              </h2>
+            <div
+              className="mt-2"
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <h2>Database don't contain movies related to your search!</h2>
             </div>
           )}
         </Col>

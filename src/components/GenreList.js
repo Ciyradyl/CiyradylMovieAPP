@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ListGroup } from "react-bootstrap";
 
 const GenreList = ({ name, id, genreChangeHandler }) => {
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);  // After redux, this will be used upon actions
 
   const handleMouseEnter = () => {
     setIsHovering(true);

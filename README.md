@@ -1,6 +1,6 @@
 **Single Page Movie Application(React)**
 
-*This application fetches json data from TMDB API and uses it to populate the related reach pages(trending, popular) with help of two buttons. You can check the movie details via clicking on that specific movie that you want to see the details. It also contains a search query for movies.*
+*This application fetches json data from TMDB API and uses it to populate the related reach pages(trending, popular) with help of two buttons. You can check the movie details via clicking on that specific movie that you want to check. It also contains a search query for movies and a categories sections that you filter the movies by their categories.*
 
 ![Screenshot_1](https://user-images.githubusercontent.com/32496821/205926452-ad25c364-2e68-49a8-92d6-af3ecfe6ef9c.png)
 
@@ -29,6 +29,10 @@
 - *[Fixed]Responsive design bugs fixed thanks to react-bootstrap*
 - *[Added]Hover CSS to genre list*
 
+**December 7, 2022 Update**
+
+- *[Added]React Router added to the project.*
+
 
 </details>
 
@@ -38,13 +42,14 @@
 - *Javascript*
 - *Bootstrap*
 - *React Bootstrap*
+- *React Router*
 - *CSS*
-- *Alertify*
+- *ReactToastify*
 
 **2. In the future;**
 
-- *Implementing "react-router-dom" and change the whole structure of the App.js with help of router technology.*
-- *Replacing the design of the category section with "active" styling.
+- *[DONE]Implementing "react-router-dom" and change the whole structure of the App.js with help of router technology.*
+- *[DONE]Replacing the design of the category section with "active" styling.*
 - *[DONE]Adding a category section and fetching "genre_ids:" parameter from TMDB API to implement category management.*
 - *[DONE] Generating a specific Navi.js file as a component and replacing the present one with Navi.js. Also detailing the Navbar with new features.*
 
