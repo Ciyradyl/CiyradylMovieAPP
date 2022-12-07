@@ -46,12 +46,9 @@
 - *CSS*
 - *ReactToastify*
 
-**2. In the future;**
+**2. Roadmap;**
 
-- *[DONE]Implementing "react-router-dom" and change the whole structure of the App.js with help of router technology.*
-- *[DONE]Replacing the design of the category section with "active" styling.*
-- *[DONE]Adding a category section and fetching "genre_ids:" parameter from TMDB API to implement category management.*
-- *[DONE] Generating a specific Navi.js file as a component and replacing the present one with Navi.js. Also detailing the Navbar with new features.*
+- *Expanding the router structure with detailed movie info page.*
 
 **3. How to start the project**
 
