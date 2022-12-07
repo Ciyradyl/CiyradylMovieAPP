@@ -29,9 +29,7 @@ function App() {
         console.log(data);
         setMovies(data.results);
       });
-  }, []);
 
-  useEffect(() => {
     fetch(API_GENRE_LIST)
       .then((res) => res.json())
       .then((data) => {

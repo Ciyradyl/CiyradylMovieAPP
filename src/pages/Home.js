@@ -26,10 +26,11 @@ const Home = ({ genres, movies, genreChangeHandler }) => {
               </div>
             </div>
           ) : (
-            <h2 className="Container">
-              None of the movies in our database match with your search! Please
-              try with another input
-            </h2>
+            <div className="mt-2" style={{display:"flex", justifyContent:"center"}}>
+              <h2>
+                Database don't contain movies related to your search!
+              </h2>
+            </div>
           )}
         </Col>
       </Row>

@@ -2,8 +2,9 @@
 
 *This application fetches json data from TMDB API and uses it to populate the related reach pages(trending, popular) with help of two buttons. You can check the movie details via clicking on that specific movie that you want to see the details. It also contains a search query for movies.*
 
-![1](https://user-images.githubusercontent.com/32496821/205645946-8f7b9fee-7e90-4062-836c-d153eec0a22c.gif)
-![2](https://user-images.githubusercontent.com/32496821/205646017-a53a5363-3f68-473b-9287-568095d374ac.gif)
+![Screenshot_1](https://user-images.githubusercontent.com/32496821/205926452-ad25c364-2e68-49a8-92d6-af3ecfe6ef9c.png)
+
+**For more details, check the youtube video please:** https://youtu.be/TGzIcTnVMvg
 
 <details>
  <summary>Latest Update Log</summary>
@@ -23,9 +24,11 @@
 
 **December 6, 2022 Update**
 
-- *[Fixed]Responsive design bugs fixed thanks to react-bootstrap*
 - *[Changes]More natural CSS decision changes.*
+- *[Changes]File structure of the project is more professional now.
+- *[Fixed]Responsive design bugs fixed thanks to react-bootstrap*
 - *[Added]Hover CSS to genre list*
+
 
 </details>
 
