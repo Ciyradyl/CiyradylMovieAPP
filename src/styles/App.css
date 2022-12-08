@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:300,700&display=swap");
-
 body {
-    font-family: "Source Sans Pro", sans-serif;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -28,3 +25,50 @@ h2{
     text-align: center;
 }
 
+
+/* Movie Details */
+
+.movie-details{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4rem;
+}
+
+.details-image{
+    max-width: 500px;
+}
+
+.details-main{
+    display: flex;
+    max-width: 500px;
+    background-color: white;
+}
+
+.details-title{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+}
+
+.details-about{
+    font-size: large;
+    margin: 0 4rem ;
+}
+
+.details-imdb{
+    display: block;
+    margin: 0 4rem;
+}
+
+.fontHead {
+    font-size: x-large;
+}
+
+.rating{
+    display: flex;
+    flex-direction: column;
+}

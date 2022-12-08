@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 import Home from "./pages/Home";
+import Details from "./pages/Details";
 
 // import { Routes, Route } from "react-router-dom";
 
@@ -16,10 +17,13 @@ const API_GENRE =
   "https://api.themoviedb.org/3/discover/movie?api_key=dcbcfe9ab6d2818e853036429ecb24e7&with_genres=";
 const API_SEARCH =
   "https://api.themoviedb.org/3/search/movie?api_key=dcbcfe9ab6d2818e853036429ecb24e7&query";
+const API_SEARCH_BY_ID = "https://api.themoviedb.org/3/movie/";
+const API_KEY = "?api_key=dcbcfe9ab6d2818e853036429ecb24e7";
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [genres, setGenres] = useState([]);
+  const [current, setCurrent] = useState([]);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -117,12 +121,26 @@ function App() {
       });
   };
 
+  const searchById = (movieId) => {
+    fetch(API_SEARCH_BY_ID + movieId + API_KEY)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        const currentData = [data];
+        setCurrent(currentData);
+      });
+  };
+
   const changeHandler = (e) => {
     setQuery(e.target.value);
   };
 
   const genreChangeHandler = (e) => {
     searchGenre(API_GENRE + e);
+  };
+
+  const selectId = (e) => {
+    searchById(e);
   };
 
   return (
@@ -135,6 +153,7 @@ function App() {
               movies={movies}
               genres={genres}
               genreChangeHandler={genreChangeHandler}
+              selectId={selectId}
               getPopular={getPopular}
               getTrending={getTrending}
               searchMovie={searchMovie}
@@ -142,6 +161,10 @@ function App() {
               query={query}
             ></Home>
           }
+        ></Route>
+        <Route
+          path="/details"
+          element={<Details current={current}></Details>}
         ></Route>
       </Routes>
 

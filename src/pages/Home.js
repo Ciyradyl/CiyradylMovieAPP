@@ -8,6 +8,7 @@ const Home = ({
   genres,
   movies,
   genreChangeHandler,
+  selectId,
   getPopular,
   getTrending,
   searchMovie,
@@ -38,8 +39,13 @@ const Home = ({
             {movies.length > 0 ? (
               <div>
                 <div className="grid">
-                  {movies.map((movieReq) => (
-                    <MovieBox key={movieReq.id} {...movieReq}></MovieBox>
+                  {movies.map((movie, movieReq) => (
+                    <MovieBox
+                      selectId={selectId}
+                      movie={movie}
+                      key={movieReq}
+                      {...movieReq}
+                    ></MovieBox>
                   ))}
                 </div>
               </div>
