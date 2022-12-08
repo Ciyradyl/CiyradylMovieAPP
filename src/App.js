@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./styles/App.css";
 import Home from "./pages/Home";
-import Details from "./pages/Details";
-import Navi from "./components/Navi";
 
 // import { Routes, Route } from "react-router-dom";
 
@@ -129,27 +127,22 @@ function App() {
 
   return (
     <>
-      <Navi
-        getPopular={getPopular}
-        getTrending={getTrending}
-        searchMovie={searchMovie}
-        changeHandler={changeHandler}
-        query={query}
-      ></Navi>
-
       <Routes>
         <Route
-          exact
           path="/"
           element={
             <Home
               movies={movies}
               genres={genres}
               genreChangeHandler={genreChangeHandler}
+              getPopular={getPopular}
+              getTrending={getTrending}
+              searchMovie={searchMovie}
+              changeHandler={changeHandler}
+              query={query}
             ></Home>
           }
         ></Route>
-        <Route path="/details" element={<Details></Details>}></Route>
       </Routes>
 
       <ToastContainer

@@ -33,6 +33,9 @@
 
 - *[Added]React Router added to the project.*
 
+**December 8, 2022 Update**
+
+- *[Changes]File structure arrangements.
 
 </details>
 
