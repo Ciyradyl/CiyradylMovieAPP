@@ -36,6 +36,7 @@
 **December 8, 2022 Update**
 
 - *[Changes]File structure arrangements.
+- *[Added]A responsive details page implemented via react router. You can access the page via "modal" and "more details" button.*
 
 </details>
 
@@ -51,7 +52,8 @@
 
 **2. Roadmap;**
 
-- *Expanding the router structure with detailed movie info page.*
+- [Done]*Expanding the router structure with detailed movie info page.*
+- *Adding a lot more information to details page and fixing the navigation bar bugs.*
 
 **3. How to start the project**
 
