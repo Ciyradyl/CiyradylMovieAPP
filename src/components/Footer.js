@@ -5,22 +5,22 @@ const Footer = () => {
     <div>
       <Row className="footer">
         <Col className="footer_header">
-          <h4 className="footer_header">MovieDB App</h4>
+          <h5 className="footer_header">MovieDB App</h5>
         </Col>
         <Col className="footer_column">
-          <h6>Home</h6>
-          <h6>Movies</h6>
-          <h6>Details</h6>
+          <h7>Home</h7>
+          <h7>Movies</h7>
+          <h7>Details</h7>
         </Col>
         <Col className="footer_column">
-          <h6>Contact</h6>
-          <h6>Recruit</h6>
-          <h6>Job Offers</h6>
+          <h7>Contact</h7>
+          <h7>Recruit</h7>
+          <h7>Job Offers</h7>
         </Col>
         <Col className="footer_column">
-          <h6>Facebook</h6>
-          <h6>Twitter</h6>
-          <h6>Instagram</h6>
+          <h7>Facebook</h7>
+          <h7>Twitter</h7>
+          <h7>Instagram</h7>
         </Col>
       </Row>
     </div>
