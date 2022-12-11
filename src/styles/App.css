@@ -30,6 +30,10 @@ div.card-body{
     padding: 0;
 }
 
+div.home{
+    margin-bottom: 8rem;
+}
+
 /* Movie Details */
 
 .movie-details{
@@ -84,7 +88,7 @@ div.card-body{
     background-color: black;
     color: white;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     padding: 0.2rem;
 }

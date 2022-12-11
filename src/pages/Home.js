@@ -17,7 +17,7 @@ const Home = ({
   query,
 }) => {
   return (
-    <div>
+    <div className="home">
       <Navi
         getPopular={getPopular}
         getTrending={getTrending}
@@ -60,9 +60,10 @@ const Home = ({
             )}
           </Col>
         </Row>
-        <Footer></Footer>
-      </Container>
+      </Container>    
+      <Footer></Footer>
     </div>
+    
   );
 };
 
