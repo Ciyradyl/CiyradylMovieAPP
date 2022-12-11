@@ -21,7 +21,7 @@ const MovieDetails = ({ current }) => {
             <div className="rating">
               <div className="details-about">
                 <h3 className="fontHead">IMDB Rating:</h3>
-                <p>{current.vote_average}</p>
+                <p>{current.vote_average}/10</p>
               </div>
               <div className="details-about">
                 <h3 className="fontHead">Release Date:</h3>

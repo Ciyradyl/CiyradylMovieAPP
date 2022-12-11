@@ -2,6 +2,7 @@
 import MovieBox from "../components/MovieBox";
 import GenreList from "../components/GenreList";
 import Navi from "../components/Navi";
+import Footer from "../components/Footer";
 import { Row, Col, Container } from "react-bootstrap";
 
 const Home = ({
@@ -59,6 +60,7 @@ const Home = ({
             )}
           </Col>
         </Row>
+        <Footer></Footer>
       </Container>
     </div>
   );

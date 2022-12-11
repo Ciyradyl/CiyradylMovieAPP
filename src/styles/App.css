@@ -14,10 +14,11 @@ body {
 
 .grid{
     display: grid;
+    justify-content: center;
     margin-left: .5px;
     grid-template-columns: repeat(4,1fr);   /* cool stuff */
     grid-gap: 0.1em;
-    justify-content: center;
+    
 }
 
 h2{
@@ -33,6 +34,7 @@ h2{
     justify-content: center;
     flex-wrap: wrap;
     padding: 4rem;
+    margin-bottom: 4rem;
 }
 
 .details-image{
@@ -71,4 +73,27 @@ h2{
 .rating{
     display: flex;
     flex-direction: column;
+}
+
+/* Footer */
+
+.footer{
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.2rem;
+}
+
+.footer_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

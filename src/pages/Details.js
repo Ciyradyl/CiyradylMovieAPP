@@ -1,5 +1,6 @@
 import Navi from "../components/Navi";
-import {} from "react-bootstrap";
+import Footer from "../components/Footer";
+import { Container } from "react-bootstrap";
 import MovieDetails from "../components/MovieDetails";
 
 const Details = ({
@@ -11,7 +12,7 @@ const Details = ({
   query,
 }) => {
   return (
-    <div>
+    <Container fluid>
       <Navi
         getPopular={getPopular}
         getTrending={getTrending}
@@ -29,7 +30,8 @@ const Details = ({
           ></MovieDetails>
         </div>
       ))}
-    </div>
+      <Footer></Footer>
+    </Container>
   );
 };
 
