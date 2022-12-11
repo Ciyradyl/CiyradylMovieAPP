@@ -25,7 +25,7 @@
 **December 6, 2022 Update**
 
 - *[Changes]More natural CSS decision changes.*
-- *[Changes]File structure of the project is more professional now.
+- *[Changes]File structure of the project is more professional now.*
 - *[Fixed]Responsive design bugs fixed thanks to react-bootstrap*
 - *[Added]Hover CSS to genre list*
 
@@ -35,8 +35,12 @@
 
 **December 8, 2022 Update**
 
-- *[Changes]File structure arrangements.
+- *[Changes]File structure arrangements.*
 - *[Added]A responsive details page implemented via react router. You can access the page via "modal" and "more details" button.*
+
+**December 11, 2022 Update**
+
+- *[Added]Footer foundation added to the respective pages with a responsive design.*
 
 </details>
 
