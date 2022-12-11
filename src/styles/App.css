@@ -26,6 +26,9 @@ h2{
     text-align: center;
 }
 
+div.card-body{
+    padding: 0;
+}
 
 /* Movie Details */
 
